@@ -79,7 +79,6 @@ namespace AnagramSolver
 
             foreach (char entryLetter in uniqueEntryLetters)
             {
-                char tmp = entryLetter;
                 Thread thread = new Thread(() => {
                     lock (dataTable)
                     {
