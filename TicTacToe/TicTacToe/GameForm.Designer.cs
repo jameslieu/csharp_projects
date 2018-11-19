@@ -45,12 +45,12 @@
             this.C2 = new System.Windows.Forms.Button();
             this.C3 = new System.Windows.Forms.Button();
             this.C1 = new System.Windows.Forms.Button();
-            this.PlayerOneWinCountLabel = new System.Windows.Forms.Label();
             this.drawCountLabel = new System.Windows.Forms.Label();
-            this.PlayerTwoWinCountLabel = new System.Windows.Forms.Label();
             this.PlayerTwoWinCount = new System.Windows.Forms.Label();
             this.DrawCount = new System.Windows.Forms.Label();
             this.PlayerOneWinCount = new System.Windows.Forms.Label();
+            this.p1 = new System.Windows.Forms.TextBox();
+            this.p2 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -227,19 +227,6 @@
             this.C1.MouseEnter += new System.EventHandler(this.buttonEnter);
             this.C1.MouseLeave += new System.EventHandler(this.buttonLeave);
             // 
-            // PlayerOneWinCountLabel
-            // 
-            this.PlayerOneWinCountLabel.AutoSize = true;
-            this.PlayerOneWinCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerOneWinCountLabel.Location = new System.Drawing.Point(15, 282);
-            this.PlayerOneWinCountLabel.MaximumSize = new System.Drawing.Size(78, 13);
-            this.PlayerOneWinCountLabel.MinimumSize = new System.Drawing.Size(78, 13);
-            this.PlayerOneWinCountLabel.Name = "PlayerOneWinCountLabel";
-            this.PlayerOneWinCountLabel.Size = new System.Drawing.Size(78, 13);
-            this.PlayerOneWinCountLabel.TabIndex = 11;
-            this.PlayerOneWinCountLabel.Text = "X Win Count";
-            this.PlayerOneWinCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // drawCountLabel
             // 
             this.drawCountLabel.AutoSize = true;
@@ -252,19 +239,6 @@
             this.drawCountLabel.TabIndex = 12;
             this.drawCountLabel.Text = "Draw Count";
             this.drawCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PlayerTwoWinCountLabel
-            // 
-            this.PlayerTwoWinCountLabel.AutoSize = true;
-            this.PlayerTwoWinCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerTwoWinCountLabel.Location = new System.Drawing.Point(174, 282);
-            this.PlayerTwoWinCountLabel.MaximumSize = new System.Drawing.Size(79, 13);
-            this.PlayerTwoWinCountLabel.MinimumSize = new System.Drawing.Size(79, 13);
-            this.PlayerTwoWinCountLabel.Name = "PlayerTwoWinCountLabel";
-            this.PlayerTwoWinCountLabel.Size = new System.Drawing.Size(79, 13);
-            this.PlayerTwoWinCountLabel.TabIndex = 13;
-            this.PlayerTwoWinCountLabel.Text = "O Win Count";
-            this.PlayerTwoWinCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PlayerTwoWinCount
             // 
@@ -296,17 +270,35 @@
             this.PlayerOneWinCount.TabIndex = 14;
             this.PlayerOneWinCount.Text = "0";
             // 
+            // p1
+            // 
+            this.p1.Location = new System.Drawing.Point(14, 282);
+            this.p1.Name = "p1";
+            this.p1.Size = new System.Drawing.Size(75, 20);
+            this.p1.TabIndex = 17;
+            this.p1.Text = "Player 1";
+            this.p1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // p2
+            // 
+            this.p2.Location = new System.Drawing.Point(176, 282);
+            this.p2.Name = "p2";
+            this.p2.Size = new System.Drawing.Size(75, 20);
+            this.p2.TabIndex = 18;
+            this.p2.Text = "Player 2";
+            this.p2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(265, 334);
+            this.Controls.Add(this.p2);
+            this.Controls.Add(this.p1);
             this.Controls.Add(this.PlayerTwoWinCount);
             this.Controls.Add(this.DrawCount);
             this.Controls.Add(this.PlayerOneWinCount);
-            this.Controls.Add(this.PlayerTwoWinCountLabel);
             this.Controls.Add(this.drawCountLabel);
-            this.Controls.Add(this.PlayerOneWinCountLabel);
             this.Controls.Add(this.C1);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.C2);
@@ -324,7 +316,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic Tac Toe";
-            this.Load += new System.EventHandler(this.GameForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -350,13 +341,13 @@
         private System.Windows.Forms.Button C2;
         private System.Windows.Forms.Button C3;
         private System.Windows.Forms.Button C1;
-        private System.Windows.Forms.Label PlayerOneWinCountLabel;
         private System.Windows.Forms.Label drawCountLabel;
-        private System.Windows.Forms.Label PlayerTwoWinCountLabel;
         private System.Windows.Forms.Label PlayerTwoWinCount;
         private System.Windows.Forms.Label DrawCount;
         private System.Windows.Forms.Label PlayerOneWinCount;
         private System.Windows.Forms.ToolStripMenuItem resetWinCountToolStripMenuItem;
+        private System.Windows.Forms.TextBox p1;
+        private System.Windows.Forms.TextBox p2;
     }
 }
 

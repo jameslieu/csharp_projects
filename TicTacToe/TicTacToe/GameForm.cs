@@ -8,40 +8,9 @@ namespace TicTacToe
         bool turn = true; // true = X's turn, false = Y's turn
         int turnCount = 0;
 
-        static String playerOne = "X";
-        static String playerTwo = "O";
-
         public GameForm()
         {
             InitializeComponent();
-        }
-
-        public static void setPlayerNames(String playerOneName, String playerTwoName)
-        {
-            if (playerOneName.Length > 0)
-            {
-                playerOne = playerOneName;
-            }
-
-            if (playerTwoName.Length > 0)
-            {
-                playerTwo = playerTwoName;
-            }
-        }
-
-        private void GameForm_Load(object sender, EventArgs e)
-        {
-            StartMenuForm form2 = new StartMenuForm();
-            form2.ShowDialog();
-            if (playerOne != "X")
-            {
-                PlayerOneWinCountLabel.Text = playerOne;
-            }
-
-            if (playerTwo != "O")
-            {
-                PlayerTwoWinCountLabel.Text = playerTwo;
-            }
         }
 
         private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
@@ -138,12 +107,12 @@ namespace TicTacToe
             String winningPlayer = "";
             if (turn)
             {
-                winningPlayer = playerTwo;
+                winningPlayer = p2.Text;
                 PlayerTwoWinCount.Text = (Int32.Parse(PlayerTwoWinCount.Text) + 1).ToString();
             }
             else
             {
-                winningPlayer = playerOne;
+                winningPlayer = p1.Text;
                 PlayerOneWinCount.Text = (Int32.Parse(PlayerOneWinCount.Text) + 1).ToString();
             }
 
