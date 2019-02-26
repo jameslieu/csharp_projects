@@ -8,7 +8,7 @@
         Right
     };
 
-    class Settings
+    internal class Settings
     {
         public static Move Direction { get; set; }
         public static bool GameOver { get; set; }

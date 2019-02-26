@@ -9,7 +9,7 @@ namespace Snake
 
         public static bool KeyPressed(Keys key)
         {
-            if(KeyTable[key] == null)
+            if (KeyTable[key] == null)
             {
                 return false;
             }

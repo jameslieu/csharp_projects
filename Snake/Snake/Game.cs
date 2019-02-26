@@ -44,13 +44,12 @@ namespace Snake
 
             lblScore.Text = Settings.Score.ToString();
             GenerateFood();
-            
         }
 
         private void GenerateFood()
         {
-            int maxXPos = pbCanvas.Size.Width/Settings.Width;
-            int maxYPos = pbCanvas.Size.Height/Settings.Height;
+            int maxXPos = pbCanvas.Size.Width / Settings.Width;
+            int maxYPos = pbCanvas.Size.Height / Settings.Height;
 
             Random random = new Random();
             Food = new Circle
@@ -98,10 +97,9 @@ namespace Snake
             }
         }
 
-
         private void ControlSnake()
         {
-            for (int i = Snake.Count -1; i >= 0; i--)
+            for (int i = Snake.Count - 1; i >= 0; i--)
             {
                 if (i == 0)
                 {
@@ -126,12 +124,15 @@ namespace Snake
                 case global::Snake.Move.Right:
                     Snake[i].X++;
                     break;
+
                 case global::Snake.Move.Left:
                     Snake[i].X--;
                     break;
+
                 case global::Snake.Move.Up:
                     Snake[i].Y--;
                     break;
+
                 case global::Snake.Move.Down:
                     Snake[i].Y++;
                     break;
@@ -177,8 +178,8 @@ namespace Snake
         private void Eat()
         {
             Circle food = new Circle();
-            food.X = Snake[Snake.Count -1].X;
-            food.Y = Snake[Snake.Count -1].Y;
+            food.X = Snake[Snake.Count - 1].X;
+            food.Y = Snake[Snake.Count - 1].Y;
 
             Snake.Add(food);
 
@@ -190,16 +191,15 @@ namespace Snake
 
         private void pbCanvas_Paint(object sender, PaintEventArgs e)
         {
-
             Graphics canvas = e.Graphics;
 
             if (!Settings.GameOver)
             {
                 Brush snakeColour;
 
-                for(int i = 0; i < Snake.Count; i++)
+                for (int i = 0; i < Snake.Count; i++)
                 {
-                    if(i ==0)
+                    if (i == 0)
                     {
                         snakeColour = Brushes.Black;
                     }
@@ -227,7 +227,6 @@ namespace Snake
                             Settings.Height
                         )
                     );
-
                 }
             }
             else
