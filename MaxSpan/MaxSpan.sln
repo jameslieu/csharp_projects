@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSpan", "MaxSpan\MaxSpan.csproj", "{230187FC-13B0-4083-AB7C-45B0B9E9A440}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxSpan.Test", "MaxSpan.Test\MaxSpan.Test.csproj", "{649200C2-3D1B-4331-886A-4A4ADB4C27CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{230187FC-13B0-4083-AB7C-45B0B9E9A440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{230187FC-13B0-4083-AB7C-45B0B9E9A440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{230187FC-13B0-4083-AB7C-45B0B9E9A440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{230187FC-13B0-4083-AB7C-45B0B9E9A440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649200C2-3D1B-4331-886A-4A4ADB4C27CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649200C2-3D1B-4331-886A-4A4ADB4C27CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649200C2-3D1B-4331-886A-4A4ADB4C27CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649200C2-3D1B-4331-886A-4A4ADB4C27CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3310888-7B95-48E8-9E33-109A9A4BA013}
+	EndGlobalSection
+EndGlobal
