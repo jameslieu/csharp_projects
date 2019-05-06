@@ -4,20 +4,20 @@ using System.Text;
 
 namespace ReverseStringExample
 {
-    public class ReverseString
-    {
-        public static string Reverse(string str)
-        {
-            string reversedString = "";
-            int length = str.Length - 1;
+	public class ReverseString
+	{
+		public static string Reverse(string str)
+		{
+			int length = str.Length - 1;
+			StringBuilder stringBuilder = new StringBuilder();
 
-            while (length >= 0)
-            {
-                reversedString = reversedString + str[length];
-                length--;
-            }
+			while (length >= 0)
+			{
+				stringBuilder.Append(str[length]);
+				length--;
+			}
 
-            return reversedString;
-        }
-    }
+			return stringBuilder.ToString();
+		}
+	}
 }
