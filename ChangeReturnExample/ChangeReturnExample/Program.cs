@@ -2,52 +2,55 @@
 
 namespace ChangeReturnExample
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Write("Please enter total purchase amount: ");
-            var purchasePriceInput = Console.ReadLine();
-            var purchasePriceDecimal = ValidateDecimal(purchasePriceInput);
+	class Program
+	{
+		private const string EnterTotalPurchaseMessage = "Please enter total purchase amount: ";
+		private const string EnterAmountMessage = "Please enter amount you're going to pay: ";
+		private const string ThankYouMessage = "Thank you for your purchase!";
+		private const string ErrorMessage = "You have not provided the correct amount";
 
-            Console.Write("Please enter amount you're going to pay: ");
-            var moneyPaidInput = Console.ReadLine();
-            var moneyPaidDecimal = ValidateDecimal(moneyPaidInput);
+		static void Main(string[] args)
+		{
+			Console.Write(EnterTotalPurchaseMessage);
+			var purchasePriceInput = Console.ReadLine();
+			var purchasePriceDecimal = ValidateDecimal(purchasePriceInput);
 
-            if (moneyPaidDecimal > purchasePriceDecimal)
-            {
-                Console.WriteLine("Thank you for your purchase!");
-                Console.WriteLine($"Here is your change: £{moneyPaidDecimal - purchasePriceDecimal}");
-                Console.WriteLine();
-                var totalChange = Purchase.ReceiveChange(purchasePriceDecimal, moneyPaidDecimal);
+			Console.Write(EnterAmountMessage);
+			var moneyPaidInput = Console.ReadLine();
+			var moneyPaidDecimal = ValidateDecimal(moneyPaidInput);
 
-                foreach (var change in totalChange)
-                {
-                    Console.WriteLine(change);
-                }
+			if (moneyPaidDecimal > purchasePriceDecimal)
+			{
+				Console.WriteLine(ThankYouMessage);
+				Console.WriteLine($"Here is your change: £{moneyPaidDecimal - purchasePriceDecimal}");
+				Console.WriteLine();
+				var totalChange = Purchase.ReceiveChange(purchasePriceDecimal, moneyPaidDecimal);
 
-                Console.ReadLine();
+				foreach (var change in totalChange)
+				{
+					Console.WriteLine(change);
+				}
 
-            } else
-            {
-                Console.WriteLine("You have not provided the correct amount");
-                Console.ReadLine();
-            }
+				Console.ReadLine();
+			}
+			else
+			{
+				Console.WriteLine(ErrorMessage);
+				Console.ReadLine();
+			}
+		}
 
+		private static decimal ValidateDecimal(string input)
+		{
+			decimal output;
+			if (!Decimal.TryParse(input, out output))
+			{
+				Console.WriteLine("Invalid input, please provide a valid amount");
+				Console.ReadLine();
+				Environment.Exit(0);
+			}
 
-        }
-
-        private static decimal ValidateDecimal(string input)
-        {
-            decimal output;
-            if (!Decimal.TryParse(input, out output))
-            {
-                Console.WriteLine("Invalid input, please provide a valid amount");
-                Console.ReadLine();
-                Environment.Exit(0);
-            }
-
-            return output;
-        }
-    }
+			return output;
+		}
+	}
 }
