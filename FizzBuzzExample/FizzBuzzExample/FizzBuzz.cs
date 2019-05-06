@@ -4,37 +4,38 @@ using System.Text;
 
 namespace FizzBuzzExample
 {
-    public class FizzBuzz
-    {
-        public static List<string> results(int number)
-        {
-            List<string> fizzBuzzList = new List<string>();
-            
-            for (int i = 1; i <= number; i++)
-            {
-                bool isFizz = i % 3 == 0;
-                bool isBuzz = i % 5 == 0;
-                string result = "";
+	public class FizzBuzz
+	{
+		public static List<string> results(int number)
+		{
+			List<string> fizzBuzzList = new List<string>();
+			StringBuilder stringBuilder = new StringBuilder();
 
-                if (isFizz)
-                {
-                    result += "Fizz";
-                }
+			for (int i = 1; i <= number; i++)
+			{
+				bool isFizz = i % 3 == 0;
+				bool isBuzz = i % 5 == 0;
 
-                if (isBuzz)
-                {
-                    result += "Buzz";
-                }
-                
-                if (String.IsNullOrEmpty(result))
-                {
-                    result = i.ToString();
-                }
+				if (isFizz)
+				{
+					stringBuilder.Append("Fizz");
+				}
 
-                fizzBuzzList.Add(result);
-            }
+				if (isBuzz)
+				{
+					stringBuilder.Append("Buzz");
+				}
 
-            return fizzBuzzList;
-        }
-    }
+				if (String.IsNullOrEmpty(stringBuilder.ToString()))
+				{
+					stringBuilder.Append(i.ToString());
+				}
+
+				fizzBuzzList.Add(stringBuilder.ToString());
+				stringBuilder.Clear();
+			}
+
+			return fizzBuzzList;
+		}
+	}
 }
