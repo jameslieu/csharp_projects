@@ -17,7 +17,7 @@ namespace CanBalance.Test
         {
             List<int> numbers = new List<int>
             {
-                one, two,three,four,five
+                one, two, three, four, five
             };
 
             bool actual = Program.CanBalance(numbers);
