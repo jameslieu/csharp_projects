@@ -18,5 +18,5 @@ And so this mini-project was born.
 ### Summary
 
 It was a fun project but isn't the most efficient, it only returns words of the same length and gets substancially slower once you enter longer words.
-The time complexity of my solution is 0(n^2)  
+The time complexity of my solution is O(n^2)  
  
