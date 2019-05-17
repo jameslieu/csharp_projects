@@ -1,5 +1,7 @@
 ### AnagramProject
 
+![image](https://user-images.githubusercontent.com/4426088/57960693-276f1e80-7902-11e9-8db0-8ecfa610d22a.png)
+
 Story time:
 I was watching an episode of 8 out of 10 Cats Does Countdown. 
 As I was sitting with my wife, I wondered whether the dictionary corner genuinely came up with their results or whether they used a program or script to do it.
