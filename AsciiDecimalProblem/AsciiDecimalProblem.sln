@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiDecimalProblem", "AsciiDecimalProblem\AsciiDecimalProblem.csproj", "{46AD50FF-0C17-4693-AAA0-ECFEBC5DEB0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiDecimalProblem.Tests", "AsciiDecimalProblem.Tests\AsciiDecimalProblem.Tests.csproj", "{14450473-C94E-4E6D-BEC2-68C72BE80701}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46AD50FF-0C17-4693-AAA0-ECFEBC5DEB0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46AD50FF-0C17-4693-AAA0-ECFEBC5DEB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46AD50FF-0C17-4693-AAA0-ECFEBC5DEB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46AD50FF-0C17-4693-AAA0-ECFEBC5DEB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14450473-C94E-4E6D-BEC2-68C72BE80701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14450473-C94E-4E6D-BEC2-68C72BE80701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14450473-C94E-4E6D-BEC2-68C72BE80701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14450473-C94E-4E6D-BEC2-68C72BE80701}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B1F3D47-0779-46D0-AC9D-ACFB1BD8FF5A}
+	EndGlobalSection
+EndGlobal
