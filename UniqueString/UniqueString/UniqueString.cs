@@ -20,7 +20,6 @@
             return true;
         }
 
-       // What if we can't use additional data structures?
         public static bool IsUnique2(string str)
         {
             // Handle null or empty cases

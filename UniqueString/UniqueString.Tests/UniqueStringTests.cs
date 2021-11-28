@@ -12,7 +12,6 @@ namespace UniqueString.Tests
         [TestCase("c", true)]
         [TestCase("chrome", true)]
         [TestCase("chr0mE", true)]
-
         public void Test_IsUnique1(string str, bool expected)
         {
             var actual = UniqueString.IsUnique1(str);
@@ -27,7 +26,6 @@ namespace UniqueString.Tests
         [TestCase("c", true)]
         [TestCase("chrome", true)]
         [TestCase("chr0mE", true)]
-
         public void Test_IsUnique2(string str, bool expected)
         {
             var actual = UniqueString.IsUnique2(str);

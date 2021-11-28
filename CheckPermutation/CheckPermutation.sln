@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPermutation", "CheckPermutation\CheckPermutation.csproj", "{BA8042E6-3833-492D-9AF0-B62331661B8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckPermutation.Tests", "CheckPermutation.Tests\CheckPermutation.Tests.csproj", "{7EB5618A-424C-4620-8A2A-F944B16A7565}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA8042E6-3833-492D-9AF0-B62331661B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA8042E6-3833-492D-9AF0-B62331661B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA8042E6-3833-492D-9AF0-B62331661B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA8042E6-3833-492D-9AF0-B62331661B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB5618A-424C-4620-8A2A-F944B16A7565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB5618A-424C-4620-8A2A-F944B16A7565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB5618A-424C-4620-8A2A-F944B16A7565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB5618A-424C-4620-8A2A-F944B16A7565}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {537696C5-97BF-4EC0-A23B-658FB1BDD96B}
+	EndGlobalSection
+EndGlobal
