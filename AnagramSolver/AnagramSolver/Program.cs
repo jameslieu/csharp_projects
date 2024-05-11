@@ -9,11 +9,11 @@ namespace AnagramSolver
 {
     public class Program
     {
-        private static DataTable dataTable = new DataTable();
-        private static List<string> permutations = new List<string>();
+        private static readonly DataTable dataTable = new();
+        private static List<string> permutations = [];
         private static int resultCount;
-        private static SQLiteConnection sqlite = new SQLiteConnection("Data Source=" + System.IO.Path.GetFullPath(@"..\..\..\db\Dictionary.db"));
-        private static List<Thread> workerThreads = new List<Thread>();
+        private static readonly SQLiteConnection sqlite = new("Data Source=" + System.IO.Path.GetFullPath(@"..\..\..\db\Dictionary.db"));
+        private static readonly List<Thread> workerThreads = [];
 
         public static void Main()
         {
@@ -36,7 +36,8 @@ namespace AnagramSolver
             {
                 Console.WriteLine("You cannot enter fewer than 2 characters. Press enter to exit");
             }
-            else if (entry.Length > 9) {
+            else if (entry.Length > 9)
+            {
                 Console.WriteLine("You cannot enter more than 9 characters. Press enter to exit");
             }
             else
@@ -45,7 +46,7 @@ namespace AnagramSolver
                 Console.WriteLine();
 
                 // Run anagram solver
-                RunAnagramSolver(entry.ToLower());                 
+                RunAnagramSolver(entry.ToLower());
                 if (resultCount == 0)
                 {
                     Console.WriteLine("There were no anagrams for that word or phrase");
@@ -55,12 +56,10 @@ namespace AnagramSolver
                 Console.WriteLine("Done");
                 Console.WriteLine("Press enter to exit.");
             }
-
         }
 
         private static void RunAnagramSolver(string entry)
         {
-
             char[] entryLetters = entry.ToCharArray();
             permutations = Permutation.GetPermutations(entryLetters, 0, entryLetters.Length - 1);
 
@@ -79,11 +78,12 @@ namespace AnagramSolver
 
             foreach (char entryLetter in uniqueEntryLetters)
             {
-                Thread thread = new Thread(() => {
+                Thread thread = new(() =>
+                {
                     lock (dataTable)
                     {
                         SQLiteCommand sqliteCommand = GetWordsByLetter(entryLetter, entry);
-                        SQLiteDataAdapter sqliteDataAdapter = new SQLiteDataAdapter(sqliteCommand);
+                        SQLiteDataAdapter sqliteDataAdapter = new(sqliteCommand);
                         sqliteDataAdapter.Fill(dataTable); //fill the datasource
                     }
                 });
@@ -105,7 +105,7 @@ namespace AnagramSolver
             for (int i = 0; i < dataTable.Rows.Count; i++)
             {
                 var word = (string)dataTable.Rows[i]["word"];
-                var lowerCaseWord = Char.ToLowerInvariant(word[0]) + word.Substring(1);
+                var lowerCaseWord = char.ToLowerInvariant(word[0]) + word[1..];
 
                 for (int j = 0; j < permutations.Count; j++)
                 {
@@ -138,12 +138,16 @@ namespace AnagramSolver
                     AND
                         LENGTH(word) > 1";
 
-                SQLiteParameter letterParam = new SQLiteParameter();
-                letterParam.Value = letter + "%";
+                SQLiteParameter letterParam = new()
+                {
+                    Value = letter + "%"
+                };
                 sqliteCommand.Parameters.Add(letterParam);
 
-                SQLiteParameter lengthParam = new SQLiteParameter();
-                lengthParam.Value = entry.Length;
+                SQLiteParameter lengthParam = new()
+                {
+                    Value = entry.Length
+                };
                 sqliteCommand.Parameters.Add(lengthParam);
             }
             catch (SQLiteException ex)
